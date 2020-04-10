@@ -27,7 +27,7 @@ dataSubset<- subset(data, Date=="1/2/2007" | Date =="2/2/2007")
 #Date variable is in a character from, we need to convert it into date format with as.Date function
 dataSubset$Date <- as.Date(dataSubset$Date, format="%d/%m/%Y")
 
-names(dataSubset) #optional, I like to check variable names when subset is created
+#names(dataSubset) #optional, I like to check variable names when subset is created
 
 #concatenate date and time
 datetime <- paste(as.Date(dataSubset$Date), dataSubset$Time)
