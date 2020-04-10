@@ -36,13 +36,14 @@ class(datetime)
 #converting "datetime" which is in a character format to POSIXct
 Date_time <- as.POSIXct(datetime)
 
-
+## Plotting lines for 3 different variables
 with(dataSubset, {
         plot(Sub_metering_1~Date_time, type="l",
              ylab="Global Active Power (kilowatts)", xlab="")
         lines(Sub_metering_2~Date_time,col='Red')
         lines(Sub_metering_3~Date_time,col='Blue')
 })
+## creating ledend for 3 different variables
 legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, 
        legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 dev.copy(png, file = "plot3.png", height = 480, width = 480)
