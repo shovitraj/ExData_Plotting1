@@ -3,7 +3,7 @@
 #Shovit Raj Bhari
 #Week: 1
 #Project 1
-#Plot 1
+#Plot 2
 ################################
 rm(list=ls())
 
@@ -27,19 +27,25 @@ dataSubset<- subset(data, Date=="1/2/2007" | Date =="2/2/2007")
 dataSubset$Date <- as.Date(dataSubset$Date, format="%d/%m/%Y")
 
 names(dataSubset) #optional, I like to check variable names when subset is created
+
+#concatenate date and time
 datetime <- paste(as.Date(dataSubset$Date), dataSubset$Time)
 head(datetime)
+class(datetime)
+
+#converting "datetime" which is in a character format to POSIXct
 Date_time <- as.POSIXct(datetime)
-head(Date_time)
+
 #converting variable "Global_active_power" to numeric
 glo_active_power <- as.numeric(dataSubset$Global_active_power)
 
 
-## Plot 2
+## Plotting a line
 with(dataSubset, {
         plot(glo_active_power~Date_time, type="l",
              ylab="Global Active Power (kilowatts)", xlab="")
 })
 
+#using png graphic device to save the plot
 dev.copy(png, file = "plot2.png", width=480, height= 480)  
 dev.off() 
