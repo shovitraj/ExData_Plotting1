@@ -16,10 +16,10 @@ data <- read.table(datapath, header=TRUE, sep=";", stringsAsFactors=FALSE)
 
 #these are optional, I like to use them to see if the data is loaded properly\
 #and to check the names of the variables
-head(data)
-names(data)
-class(data$Date) #Variable Date is in a character format
-class(data$Global_active_power) #Variable "Global_active_power" is in a character format
+#head(data)
+#names(data)
+#class(data$Date) #Variable Date is in a character format
+#class(data$Global_active_power) #Variable "Global_active_power" is in a character format
 
 #creating the subset of data from the dates 2007-02-01 and 2007-02-02
 
