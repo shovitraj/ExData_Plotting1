@@ -49,7 +49,7 @@ with(dataSubset, {
         plot(glo_active_power~Date_time, type="l", 
              ylab="Global Active Power (kilowatts)", xlab="")
         plot(Voltage~Date_time, type="l", 
-             ylab="Voltage (volt)", xlab="")
+             ylab="Voltage", xlab="time")
         plot(Sub_metering_1~Date_time, type="l",
              ylab="Global Active Power (kilowatts)", xlab="")
         lines(Sub_metering_2~Date_time,col='Red')
@@ -57,7 +57,7 @@ with(dataSubset, {
         legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, bty="n",
                legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
         plot(glo_reactive_power~Date_time, type="l", 
-             ylab="Global Rective Power (kilowatts)",xlab="")
+             ylab="Global_Rective_Power (kilowatts)",xlab="datetime")
 })
 
 #using png graphic device to save the plot
