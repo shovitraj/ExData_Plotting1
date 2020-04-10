@@ -28,7 +28,9 @@ dataSubset$Date <- as.Date(dataSubset$Date, format="%d/%m/%Y")
 
 names(dataSubset) #optional, I like to check variable names when subset is created
 datetime <- paste(as.Date(dataSubset$Date), dataSubset$Time)
+head(datetime)
 Date_time <- as.POSIXct(datetime)
+head(Date_time)
 #converting variable "Global_active_power" to numeric
 glo_active_power <- as.numeric(dataSubset$Global_active_power)
 
