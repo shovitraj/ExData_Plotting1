@@ -1,10 +1,10 @@
-
-#Coursera Data Science Specialization: Exploratory Data Analysis
-#Shovit Raj Bhari
-#Week: 1
-#Project 1
-#Plot 2
-################################
+##################################################################
+# Coursera Data Science Specialization: Exploratory Data Analysis#
+# Shovit Raj Bhari                                               #
+# Week: 1                                                        #
+# Project: 1                                                     #
+# Plot: 2                                                        #
+##################################################################
 rm(list=ls())
 
 library(data.table)
