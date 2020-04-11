@@ -44,12 +44,12 @@ glo_reactive_power <- as.numeric(dataSubset$Global_reactive_power)
 #creating graphial parameter with 2 col, 2 rows and margins
 par(mfrow=c(2,2), mar=c(4,4,2,1))
 
-#will produce 4 plots 
+#will produce 4 plots with titles and labels
 with(dataSubset, {
         plot(glo_active_power~Date_time, type="l", 
              ylab="Global Active Power (kilowatts)", xlab="")
         plot(Voltage~Date_time, type="l", 
-             ylab="Voltage", xlab="time")
+             ylab="Voltage", xlab="datetime")
         plot(Sub_metering_1~Date_time, type="l",
              ylab="Global Active Power (kilowatts)", xlab="")
         lines(Sub_metering_2~Date_time,col='Red')
@@ -57,7 +57,7 @@ with(dataSubset, {
         legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, bty="n",
                legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
         plot(glo_reactive_power~Date_time, type="l", 
-             ylab="Global_Rective_Power (kilowatts)",xlab="datetime")
+             ylab="Global_rective_power (kilowatts)",xlab="datetime")
 })
 
 #using png graphic device to save the plot

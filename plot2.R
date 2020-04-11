@@ -40,7 +40,7 @@ Date_time <- as.POSIXct(datetime)
 glo_active_power <- as.numeric(dataSubset$Global_active_power)
 
 
-## Plotting a line
+## Plotting a line and adding title and label
 with(dataSubset, {
         plot(glo_active_power~Date_time, type="l",
              ylab="Global Active Power (kilowatts)", xlab="")

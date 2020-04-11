@@ -39,7 +39,7 @@ datetime <- paste(as.Date(dataSubset$Date), dataSubset$Time)
 #converting "datetime" which is in a character format to POSIXct
 Date_time <- as.POSIXct(datetime)
 
-## Plotting lines for 3 different variables
+## Plotting lines for 3 different variables with their own color and labels
 with(dataSubset, {
         plot(Sub_metering_1~Date_time, type="l",
              ylab="Global Active Power (kilowatts)", xlab="")

@@ -33,7 +33,7 @@ dataSubset$Date <- as.Date(dataSubset$Date, format="%d/%m/%Y")
 glo_active_power <- as.numeric(dataSubset$Global_active_power)
 
 
-#Plotting a histogram
+#Plotting a histogram and adding title, labels, and color
 hist(glo_active_power,
      main="Global Active Power", 
      xlab="Global Active Power (kilowatts)", 
